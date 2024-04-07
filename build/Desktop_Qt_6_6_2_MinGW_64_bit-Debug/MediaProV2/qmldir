@@ -1,0 +1,12 @@
+module MediaProV2
+typeinfo appMediaProV2.qmltypes
+prefer :/qt/qml/MediaProV2/
+Main 1.0 Main.qml
+BottomBar1 1.0 BottomBar1.qml
+LibraryScreen 1.0 LibraryScreen.qml
+PlayingScreen 1.0 PlayingScreen.qml
+QueueScreen 1.0 QueueScreen.qml
+RulesScreen 1.0 RulesScreen.qml
+SettingsScreen 1.0 SettingsScreen.qml
+TagsScreen 1.0 TagsScreen.qml
+

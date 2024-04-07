@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>_AM__(Arctic_Monkeys).jpg</file>
+        <file>640px-Windows_Media_Player_simplified_logo.svg.png</file>
+        <file>down.png</file>
+        <file>forward.png</file>
+        <file>image.png</file>
+        <file>magnifying-glass.png</file>
+        <file>next (1).png</file>
+        <file>pause.png</file>
+        <file>play-button-arrowhead.png</file>
+        <file>previous-track.png</file>
+        <file>repeat.png</file>
+        <file>shuffle.png</file>
+        <file>trash.png</file>
+        <file>volume-down.png</file>
+        <file>volume-up.png</file>
+        <file>mute.png</file>
+    </qresource>
+</RCC>

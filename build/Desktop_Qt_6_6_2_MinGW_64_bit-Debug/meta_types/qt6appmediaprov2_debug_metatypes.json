@@ -1,0 +1,26 @@
+[
+    {
+        "classes": [
+            {
+                "className": "SomeClass",
+                "object": true,
+                "qualifiedClassName": "SomeClass",
+                "slots": [
+                    {
+                        "access": "public",
+                        "name": "callMe",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "someclass.h",
+        "outputRevision": 68
+    }
+]
