@@ -19,7 +19,6 @@ Rectangle{
 
     property int currentPosition: 0
     property int songLength: 257
-    property bool playingOrNot: true
 
     Slider{
         id: trackProgress
@@ -47,7 +46,7 @@ Rectangle{
 
             onTriggered: {
                 // Increment the currentPosition by 1 second
-                if (currentPosition < songLength & playingOrNot === true) {
+                if (currentPosition < songLength & appHandler.playPausing === true) {
                     currentPosition++;
                     trackProgress.value = currentPosition;
                 }
@@ -57,7 +56,7 @@ Rectangle{
 
     Slider{
         id: volumeBar
-        value: 0.5
+        value: appHandler.currentVolume
         y: parent.height - 120
         anchors{
             right: parent.right
@@ -68,15 +67,12 @@ Rectangle{
 
         onPressedChanged:{
             if (!pressed && volumeBar.value === 0){
-                volumeIcon.source = "qrc:/mute.png"
-                volumeIcon.muteOrNot = true
-                volumeIcon.currentValue = volumeBar.value
-                volumeBar.value = 0
+                appHandler.setMuted(true)
+                appHandler.setCurrentVolume(0)
             }
             else if (!pressed && volumeBar.value > 0){
-                volumeIcon.source = "qrc:/volume-down.png"
-                volumeIcon.muteOrNot = false
-                volumeIcon.currentValue = volumeBar.value
+                appHandler.setMuted(false)
+                appHandler.setCurrentVolume(volumeBar.value)
             }
         }
     }
@@ -86,16 +82,13 @@ Rectangle{
         width: 30
         height: 30
         y: parent.height - 120
-        source: "qrc:/volume-down.png"
+        source: (appHandler.muted ? "qrc:/mute.png" : "qrc:/volume-down.png")
         fillMode: Image.PreserveAspectFit
         opacity: volumeIconArea.containsMouse ? 1 : 0.5
-        property bool muteOrNot: false
-        property double currentValue: 0
         anchors{
             right: parent.right
             rightMargin: 320
         }
-
 
         MouseArea{
             id: volumeIconArea
@@ -104,16 +97,13 @@ Rectangle{
 
             onClicked: {
                 // Need to call the backend to change the mute to true or false
-                if (volumeIcon.muteOrNot == false){
-                    volumeIcon.source= "qrc:/mute.png"
-                    volumeIcon.muteOrNot = true
-                    volumeIcon.currentValue = volumeBar.value
-                    volumeBar.value = 0
+                if (appHandler.muted === false){
+                    appHandler.setMuted(true)
+                    appHandler.setCurrentVolume(0)
                 }
                 else{
-                    volumeIcon.source = "qrc:/volume-down.png"
-                    volumeIcon.muteOrNot = false
-                    volumeBar.value = volumeIcon.currentValue
+                    appHandler.setMuted(false)
+                    appHandler.setCurrentVolume(0)
                 }
             }
         }
@@ -178,7 +168,7 @@ Rectangle{
 
                 currentPosition = 0
                 trackProgress.value = 0
-                currentTrackProgression.value = formatTime(0)
+                currentTrackProgression.text = formatTime(0)
             }
         }
     }
@@ -202,24 +192,16 @@ Rectangle{
             id: playButtonMouse
             anchors.fill: parent
             hoverEnabled: true
-            onClicked: {
-                // Need to call the backend to change the playing instance to false or true
-                if (playingOrNot == true){
-                    playButton.source = "qrc:/play-button-arrowhead.png"
-                    playingOrNot = false
-                }
-                else{
-                    playButton.source = "qrc:/pause.png"
-                    playingOrNot = true
-                }
-            }
+
+            // Really should work we are just calling a method but its not working
+            onClicked: appHandler.setPlayPausing(!appHandler.playPausing)
         }
 
         Image {
             id: playButton
             width: 40
             height: 40
-            source: "qrc:/pause.png"
+            source: (appHandler.playPausing ? "qrc:/pause.png" :"qrc:/play-button-arrowhead.png")
             anchors.centerIn: parent
             fillMode: Image.PreserveAspectFit
             opacity: 1

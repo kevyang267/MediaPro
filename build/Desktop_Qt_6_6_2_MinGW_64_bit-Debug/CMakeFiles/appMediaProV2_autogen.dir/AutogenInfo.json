@@ -584,9 +584,15 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/oofa/Documents/MediaProV2/someclass.h",
+			"C:/Users/oofa/Documents/MediaProV2/Controllers/MusicPlayer.h",
 			"MU",
-			"EWIEGA46WW/moc_someclass.cpp",
+			"XUX5SSWLF5/moc_MusicPlayer.cpp",
+			null
+		],
+		[
+			"C:/Users/oofa/Documents/MediaProV2/Controllers/system.h",
+			"MU",
+			"XUX5SSWLF5/moc_system.cpp",
 			null
 		]
 	],
@@ -688,12 +694,16 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/oofa/Documents/MediaProV2/Controllers/system.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/oofa/Documents/MediaProV2/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug/.rcc/qmlcache/appMediaProV2_qmlcache_loader.cpp",
 			"MU",
 			null
 		],
-		[ "C:/Users/oofa/Documents/MediaProV2/main.cpp", "MU", null ],
-		[ "C:/Users/oofa/Documents/MediaProV2/someclass.cpp", "MU", null ]
+		[ "C:/Users/oofa/Documents/MediaProV2/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

@@ -1,6 +1,7 @@
 import QtQuick 
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Controls.Material
 
 Rectangle{
     id: leftSideBar
@@ -24,6 +25,7 @@ Rectangle{
         height: leftSideBar.height/2
         width: leftSideBar.width
         spacing: 75
+        Material.theme: Material.Dark
 
         Button {
             id: playingText
@@ -32,14 +34,11 @@ Rectangle{
             font.pointSize: 32
             font.family: "Bahnschrift Light SemiCondensed"
             Layout.alignment: Qt.AlignCenter
-            palette.buttonText: "white"
-
-            background: Rectangle {
-                color: playingText.clicked ? "#1f1f1f" : "blue"
-            }
+            Material.background: appHandler.currentPage === "playing" ?  "#2B8FEB" : "#1F1F1F"
 
             onClicked: {
                 mainLoader.source = "PlayingScreen.qml"
+                appHandler.setCurrentPage("playing")
             }
         }
 
@@ -51,11 +50,11 @@ Rectangle{
             font.family: "Bahnschrift Light SemiCondensed"
             Layout.alignment: Qt.AlignCenter
             palette.buttonText: "white"
-
-            background: Rectangle {
-                color:"#1f1f1f"
+            Material.background: appHandler.currentPage === "library" ?  "#2B8FEB" : "#1F1F1F"
+            onClicked: {
+                mainLoader.source = "LibraryScreen.qml"
+                appHandler.setCurrentPage("library")
             }
-            onClicked: mainLoader.source = "LibraryScreen.qml"
         }
 
         Button {
@@ -65,14 +64,11 @@ Rectangle{
             font.pointSize: 32
             font.family: "Bahnschrift Light SemiCondensed"
             Layout.alignment: Qt.AlignCenter
-            palette.buttonText: "white"
-
-            background: Rectangle {
-                color:"#1f1f1f"
-            }
+            Material.background: appHandler.currentPage === "queue" ?  "#2B8FEB" : "#1F1F1F"
 
             onClicked: {
                 mainLoader.source = "QueueScreen.qml"
+                appHandler.setCurrentPage("queue")
             }
         }
 
@@ -83,14 +79,11 @@ Rectangle{
             font.pointSize: 32
             font.family: "Bahnschrift Light SemiCondensed"
             Layout.alignment: Qt.AlignCenter
-            palette.buttonText: "white"
-
-            background: Rectangle {
-                color:"#1f1f1f"
-            }
+            Material.background: appHandler.currentPage === "rules" ?  "#2B8FEB" : "#1F1F1F"
 
             onClicked: {
                 mainLoader.source = "RulesScreen.qml"
+                appHandler.setCurrentPage("rules")
             }
         }
 
@@ -101,14 +94,11 @@ Rectangle{
             font.pointSize: 32
             font.family: "Bahnschrift Light SemiCondensed"
             Layout.alignment: Qt.AlignCenter
-            palette.buttonText: "white"
-
-            background: Rectangle {
-                color:"#1f1f1f"
-            }
+            Material.background: appHandler.currentPage === "tags" ?  "#2B8FEB" : "#1F1F1F"
 
             onClicked: {
                 mainLoader.source = "TagsScreen.qml"
+                appHandler.setCurrentPage("tags")
             }
         }
 
@@ -119,14 +109,11 @@ Rectangle{
             font.pointSize: 32
             font.family: "Bahnschrift Light SemiCondensed"
             Layout.alignment: Qt.AlignCenter
-            palette.buttonText: "white"
-
-            background: Rectangle {
-                color:"#1f1f1f"
-            }
+            Material.background: appHandler.currentPage === "settings" ?  "#2B8FEB" : "#1F1F1F"
 
             onClicked: {
                 mainLoader.source = "SettingsScreen.qml"
+                appHandler.setCurrentPage("settings")
             }
         }
     }

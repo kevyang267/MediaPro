@@ -5,9 +5,7 @@ project(MediaProV2 VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set (CMAKE_AUTORCC ON)
-
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
-
 qt_standard_project_setup(REQUIRES 6.5)
 
 qt_add_executable(appMediaProV2
@@ -23,7 +21,7 @@ qt_add_qml_module(appMediaProV2
         RESOURCES
         QML_FILES
         RESOURCES Images.qrc
-        SOURCES someclass.h someclass.cpp
+        SOURCES
         RESOURCES SideBar.qml
         QML_FILES
         QML_FILES BottomBar1.qml
@@ -33,6 +31,8 @@ qt_add_qml_module(appMediaProV2
         QML_FILES RulesScreen.qml
         QML_FILES SettingsScreen.qml
         QML_FILES TagsScreen.qml
+        SOURCES Controllers/system.h Controllers/system.cpp
+        SOURCES Controllers/MusicPlayer.h
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

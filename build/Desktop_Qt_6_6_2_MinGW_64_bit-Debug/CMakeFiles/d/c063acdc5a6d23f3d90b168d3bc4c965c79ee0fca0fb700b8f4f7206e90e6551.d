@@ -721,6 +721,9 @@ appMediaProV2_autogen/timestamp: \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/oofa/Documents/MediaProV2/CMakeLists.txt \
+  C:/Users/oofa/Documents/MediaProV2/Controllers/MusicPlayer.h \
+  C:/Users/oofa/Documents/MediaProV2/Controllers/system.cpp \
+  C:/Users/oofa/Documents/MediaProV2/Controllers/system.h \
   C:/Users/oofa/Documents/MediaProV2/Images.qrc \
   .qtc/package-manager/auto-setup.cmake \
   .rcc/qmlcache/appMediaProV2_qmlcache_loader.cpp \
@@ -728,6 +731,4 @@ appMediaProV2_autogen/timestamp: \
   CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
   appMediaProV2_autogen/moc_predefs.h \
-  C:/Users/oofa/Documents/MediaProV2/main.cpp \
-  C:/Users/oofa/Documents/MediaProV2/someclass.cpp \
-  C:/Users/oofa/Documents/MediaProV2/someclass.h
+  C:/Users/oofa/Documents/MediaProV2/main.cpp

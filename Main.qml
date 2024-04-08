@@ -19,6 +19,6 @@ Window {
 
     Loader {
         id: mainLoader
-        source: "QueueScreen.qml"
+        source: "PlayingScreen.qml"
     }
 }

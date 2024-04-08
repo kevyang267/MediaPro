@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-69a22c017dc8f0afa2db.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MediaProV2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-5d30b2f93b9942a6a115.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-5b141baf89b2292fe06a.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-4ff4c10e9d2826dfb5b6.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-eecc4210d0528588c02c.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2-Debug-0eec1b33d4bd93501c30.json",
+					"name" : "appMediaProV2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_autogen-Debug-3449e1fb0b4ca7976ea6.json",
+					"name" : "appMediaProV2_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_autogen_timestamp_deps-Debug-7cff75baadb72d5624f3.json",
+					"name" : "appMediaProV2_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_qmlimportscan-Debug-8e35ebb25eb29c7f5ce0.json",
+					"name" : "appMediaProV2_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_qmllint-Debug-a8273951b788f8a5fe38.json",
+					"name" : "appMediaProV2_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_qmllint_json-Debug-5e26777599afdb0c69a4.json",
+					"name" : "appMediaProV2_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_qmllint_module-Debug-3bd81e40353bcc4223d2.json",
+					"name" : "appMediaProV2_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_qmltyperegistration-Debug-c42b227e1199d1d17364.json",
+					"name" : "appMediaProV2_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMediaProV2_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMediaProV2_tooling-Debug-58eba54b8c2a03dfe718.json",
+					"name" : "appMediaProV2_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/oofa/Documents/MediaProV2/build/Desktop_Qt_6_6_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/oofa/Documents/MediaProV2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

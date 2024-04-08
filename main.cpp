@@ -1,13 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "someclass.h"
 #include <QQmlContext>
+#include <Controllers/system.h>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    SomeClass testClass;
+    System m_systemHandler;
 
     QQmlApplicationEngine engine;
     QObject::connect(
@@ -16,10 +16,10 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    engine.loadFromModule("MediaProV2", "Main");
 
-    QQmlContext * rootCountext = engine.rootContext();
-    rootCountext -> setContextProperty("classA", &testClass);
+    QQmlContext * context (engine.rootContext());
+    context -> setContextProperty("appHandler", &m_systemHandler);
+    engine.loadFromModule("MediaProV2", "Main");
 
     return app.exec();
 }

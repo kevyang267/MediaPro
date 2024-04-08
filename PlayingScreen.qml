@@ -43,7 +43,7 @@ Rectangle {
             id: previousPlayingAlbum
             anchors.fill: parent
             fillMode: Image.PreserveAspectFit
-            source: "qrc:/_AM__(Arctic_Monkeys).jpg"
+            source: (appHandler.nextClicked ? "qrc:/down.png" : "qrc:/trash.png")
             opacity: previousAlbumArea.containsMouse ? 1 : 0.5
 
             MouseArea{
@@ -67,7 +67,7 @@ Rectangle {
                     nextPlayingArtist.text = ""
 
                     // Resetting the track progress
-                    trackProgress.value = ""
+                    trackProgress.text = ""
                 }
             }
         }

@@ -123,22 +123,22 @@ Rectangle {
     }
 
     // List view item
-    ListView{
+    // ListView{
 
-        width: parent.width - 75
-        height: parent.height
-        model: ListModel {
-            ListElement { name: "Item1"}
-            ListElement {name: "item2"}
-        }
+    //     width: parent.width - 75
+    //     height: parent.height
+    //     model: ListModel {
+    //         ListElement { name: "Item1"}
+    //         ListElement {name: "item2"}
+    //     }
 
-        delegate: Item {
-            width: parent.width
-            height: 40
-            Text{
-                anchors.centerIn: parent
-                text: model.name
-            }
-        }
-    }
+    //     delegate: Item {
+    //         width: parent.width
+    //         height: 40
+    //         Text{
+    //             anchors.centerIn: parent
+    //             text: model.name
+    //         }
+    //     }
+    // }
 }
