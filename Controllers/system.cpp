@@ -100,3 +100,17 @@ void System::setCurrentPage(const QString &newCurrentPage)
     m_currentPage = newCurrentPage;
     emit currentPageChanged();
 }
+
+bool System::openFileDirectory() const
+{
+    return m_openFileDirectory;
+}
+
+void System::setopenFileDirectory(bool newOpenFileDirectory)
+{
+    if (m_openFileDirectory == newOpenFileDirectory)
+        return;
+    m_openFileDirectory = newOpenFileDirectory;
+
+    emit openFileDirectoryChanged();
+}

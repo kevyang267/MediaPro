@@ -13,6 +13,7 @@ class System : public QObject
     Q_PROPERTY(bool muted READ muted WRITE setMuted NOTIFY mutedChanged)
     Q_PROPERTY(double currentVolume READ currentVolume WRITE setCurrentVolume NOTIFY currentVolumeChanged)
     Q_PROPERTY(QString currentPage READ currentPage WRITE setCurrentPage NOTIFY currentPageChanged FINAL)
+    Q_PROPERTY(bool openFileDirectory READ openFileDirectory WRITE setOpenFileDirectory NOTIFY openFileDirectoryChanged FINAL)
 
 public:
     explicit System(QObject *parent = nullptr);
@@ -23,6 +24,7 @@ public:
     bool muted() const;
     double currentVolume() const;
     QString currentPage() const;
+    bool openFileDirectory() const;
 
 public slots:
     void setPlayPausing(bool newPlayPausing);
@@ -32,18 +34,17 @@ public slots:
     void setMuted(bool newMuted);
     void setCurrentVolume(int newCurrentVolume);
     void setCurrentPage(const QString &newCurrentPage);
+    void setopenFileDirectory(bool newOpenFileDirectory);
 
 signals:
     void nextClickedChanged();
     void previousClickedChanged();
     void playPauseChanged();
     void playPausingChanged();
-
     void mutedChanged();
-
     void currentVolumeChanged();
-
     void currentPageChanged();
+    void openFileDirectoryChanged();
 
 private:
     bool m_nextClicked;
@@ -53,6 +54,7 @@ private:
     bool m_muted;
     double m_currentVolume;
     QString m_currentPage;
+    bool m_openFileDirectory;
 };
 
 #endif // SYSTEM_H
