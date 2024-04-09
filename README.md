@@ -1,3 +1,7 @@
+# README 
+
+## INSTALLING QT
+To install QT and its dependencies, visit https://www.qt.io/download and create an account. You will need to create an account as an open-source user to ensure that no paid subscriptions need to be made. When you have the installer downloaded, you must run it. As the installer is running, it will ask to install a different version of the software. For this application, you will need to have version 6.6.2 installed with QT Creator. When you have successfully downloaded this version, you will need to open QT Creator. Choose to open an existing project and select the folder where you have downloaded the contents of this repository (you can either clone into the repo or download the files manually from github). To run the code, you can click on the green run arrow on the bottom of the left bar.  
 
 # Media Pro
 This application is going to be a desktop music player similar to Windows Media Player, but targeted towards those who wish to do more library organization then is posable within playlist systems. Instead of playlist, a tags and rules system will be used.
